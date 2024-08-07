@@ -1,0 +1,17 @@
+<hr/>
+
+<main>
+  <h2 class="text-center">
+    <span class="iconify-inline" data-icon="ri:file-fill" style="margin-left:.5em;margin-right:0"></span>Files
+  </h2>
+  {% assign files = site.static_files | where: "file", true %}
+  {% for file in files %}
+  <div class="row">
+    <div class="col is-center">
+      <a class="button outline secondary" href="{{ file.path }}" target="_blank">
+        {{ file.name }}
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</main>

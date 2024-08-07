@@ -13,6 +13,11 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: "assets/files"
+    values:
+      file: true
 
 # Exclude
 exclude: [README.md, Gemfile.lock, .jekyll-cache/, .github/, CHANGELOG.md, Gemfile]
