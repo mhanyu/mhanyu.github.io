@@ -1,0 +1,9 @@
+- name: linkedin
+  url: https://www.linkedin.com/in/mhanyu/
+  icon: ri:linkedin-fill
+  color: '#0b66c2'
+
+- name: github
+  url: https://github.com/mhanyu
+  icon: ri:github-fill
+  color: '#22262c'
