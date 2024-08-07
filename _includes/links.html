@@ -1,10 +1,11 @@
 <hr/>
 
+{% assign files = site.static_files | where: "file", true %}
+{% if files.size > 0 %}
 <main>
   <h2 class="text-center">
     <span class="iconify-inline" data-icon="ri:file-fill" style="margin-left:.5em;margin-right:0"></span>Files
   </h2>
-  {% assign files = site.static_files | where: "file", true %}
   {% for file in files %}
   <div class="row">
     <div class="col is-center">
@@ -15,3 +16,4 @@
   </div>
   {% endfor %}
 </main>
+{% endif %}
