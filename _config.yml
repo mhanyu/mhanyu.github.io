@@ -2,6 +2,7 @@
 theme: linkhub-jekyll-theme
 name: Maya Hanyu
 description: Software Engineer
+logo: https://avatars.githubusercontent.com/u/17304731
 
 badge:
   enable: false
