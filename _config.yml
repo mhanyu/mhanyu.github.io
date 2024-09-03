@@ -2,6 +2,9 @@
 theme: linkhub-jekyll-theme
 name: Maya Hanyu
 description: Software Engineer
+favicon:
+  path: assets/images/favicon.png
+  type: png
 logo: https://avatars.githubusercontent.com/u/17304731
 
 badge:
@@ -11,7 +14,7 @@ badge:
 defaults:
   -
     scope:
-      path: ""
+      path: "*.html"
     values:
       layout: "default"
   -
