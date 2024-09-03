@@ -5,7 +5,7 @@
 ### Files
 
 {% for item in files %}
-- [![](https://api.iconify.design/ri/file-fill.svg?height=16) {{ item.name }}]({{ item.path }})
+- [![](https://api.iconify.design/ri/file-fill.svg?height=16) {{ item.name }}]({{ item.path | absolute_url }})
 {% endfor %}
 
 {% endif %}
