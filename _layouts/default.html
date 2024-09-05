@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% if site.ga4 != null %}
+  {% include ga4.html %}
+  {% endif %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.tagline }} - {{ site.name }}</title>
+  <link rel="shortcut icon" href="{{ site.favicon.path }}" type="image/{{ site.favicon.type }}">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ site.name }}" />
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:locale" content="{{ site.locale }}" />
+  <meta property="og:image" content="{{ site.url }}/{{ site.image.path }}" />
+  <meta property="og:image:type" content="image/{{ site.image.type }}" />
+  <meta property="og:image:width" content="{{ site.image.width }}">
+  <meta property="og:image:height" content="{{ site.image.height }}">
+  <meta property="og:image:alt" content="{{ site.image.alt }}">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@{{ site.twitter.username }}" />
+  <meta name="twitter:title" content="{{ site.name }}" />
+  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:image" content="{{ site.url }}/{{ site.image.path }}" />
+</head>
+
+<body>
+  <div class="container is-full-screen">
+
+    {% include intro.html %}
+
+    <!-- Dark / Light Mode Switch -->
+    {% include theme-switch.html %}
+
+    <!-- Social Media Links -->
+    {% include social.html %}
+
+    {% include work.html %}
+
+    {% include skills.html %}
+
+    <!-- Files Buttons -->
+    {% include files.html %}
+
+    <!-- Link Buttons -->
+    {% include links.html %}
+
+    {% include footer.html %}
+  </div>
+  <script src="assets/script.js"></script>
+</body>
+
+</html>

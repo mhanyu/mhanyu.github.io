@@ -1,0 +1,9 @@
+<main>
+
+<h2 class="text-center">My Tech Stack</h2>
+<div class="is-center">
+{% for skill in site.data.skills %}
+<img alt="{{ skill.name }}" src='https://api.iconify.design/{{ skill.icon | replace: ":", "/"  }}.svg?height=24'/>
+{% endfor %}
+</div>
+</main>

@@ -1,11 +1,6 @@
-
-{% assign files = site.static_files | where: "file", true %}
-{% if files.size > 0 %}
----
-### Files
-
-{% for item in files %}
-- [![](https://api.iconify.design/ri/file-fill.svg?height=16) {{ item.name }}]({{ item.path | absolute_url }})
+{% for button in site.data.links.buttons %}
+### {{ button.category }}
+  {% for item in button.items %}
+- [![](https://api.iconify.design/{{ item.icon | replace: ":", "/"  }}.svg?height=16) {{ item.title }}]({{ item.url }})
+  {% endfor %}
 {% endfor %}
-
-{% endif %}

@@ -1,0 +1,13 @@
+<main>
+  <div class="is-center">
+  <ul>
+  {% for work in site.data.work %}
+  {% if work.url.size > 0 %}
+
+  <li>{{ work.sentence }} <b><a href="{{ work.url }}">{{ work.name }}</a></b></li>
+  {% else %}
+  <li>{{ work.sentence }} <b>{{ work.name }}</b></li>  {% endif %}
+  {% endfor %}
+  </ul>
+</div>
+</main>

@@ -1,0 +1,28 @@
+<main>
+  {% assign files = site.static_files | where: "file", true %}
+  {% if files.size > 0 %}
+  <h2 class="text-center">Files</h2>
+  {% for item in files %}
+
+  {% assign title = item.name %}
+  {% assign url = item.path %}
+  {% if title contains ".pdf" %}
+  {% assign icon = "hugeicons:pdf-02" %}
+  {% else %}
+  {% assign icon = "hugeicons:file-01" %}
+  {% endif %}
+
+  <div class="row">
+
+    <div class="col is-center">
+
+      {% if site.data.links.fixed-button-width == true %}
+      <a class="button outline secondary" style="width:80%" href="{{ url | absolute_url }}" target="_blank">{% else %}<a
+          class="button outline secondary" href="{{ url | absolute_url }}" target="_blank">{% endif %}{% if
+          site.data.links.icon-position == "right" %}{{ title }}{% if icon %}<span class="iconify-inline"
+            data-icon="{{ icon }}" style="margin-left:.5em;margin-right:0"></span>{% endif %}</a>{% else %}{% if icon
+        %}<span class="iconify-inline" data-icon="{{ icon }}"></span>{% endif %}{{ title }}</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
